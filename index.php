@@ -1,16 +1,36 @@
 <?php
-include "class/Rechteckzelt.php";
-include "class/Rundzelt.php";
-include "class/Sechseckzelt.php";
 
 
-$grundflaeche= new \class\Rechteckzelt(400,300);
-$rundzelt = new \class\Rundzelt(200);
-$sechseckzelt = new \class\Sechseckzelt(30);
+spl_autoload_register(function ($className){
+    include 'class/' . $className . '.php';
+});
+
+$grundflaeche=new Rechteckzelt(2,3);
+$grundflaeche1=new Rechteckzelt(11,13);
+$rundzelt = new Rundzelt(6);
+$sechseckzelt = new Sechseckzelt(7);
+
 
 echo $grundflaeche->getFlaeche();
+echo '<br>';
+echo $grundflaeche1->getFlaeche();
 echo '<br>';
 echo $rundzelt->getFlaeche();
 echo '<br>';
-echo $grundflaeche->getFlaeche();
+echo $sechseckzelt->getFlaeche();
+echo '<br>';
+echo $gesamt=$grundflaeche->getFlaeche()+$grundflaeche1->getFlaeche()+$rundzelt->getFlaeche()*2+$sechseckzelt->getFlaeche();
+echo '<br>';
+
+$a=new Ausstellungsflaeche();//aufruf von standart constructors der in classen standart ist.
+// metode aufrufen
+$a->erstelletestdaten();
+
+echo '<pre>';
+print_r($a);
+echo '</pre>';
+
+echo $a->getGesamtflaeche();
+
 ?>
+

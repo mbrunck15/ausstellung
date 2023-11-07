@@ -1,25 +1,24 @@
 <?php
 
-namespace class;
 
-class Sechseckzelt
+class Sechseckzelt implements IFaeche
 {
-    private int $seitenlaege;
+    private float $seitenlaege;
 
     /**
      * @param int $seitenlaege
      */
-    public function __construct(int $seitenlaege)
+    public function __construct(float $seitenlaege)
     {
         $this->seitenlaege = $seitenlaege;
     }
 
-    public function getSeitenlaege(): int
+    public function getSeitenlaege(): float
     {
         return $this->seitenlaege;
     }
 
-    public function setSeitenlaege(int $seitenlaege): void
+    public function setSeitenlaege(float $seitenlaege): void
     {
         $this->seitenlaege = $seitenlaege;
     }

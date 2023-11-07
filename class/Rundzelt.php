@@ -1,8 +1,7 @@
 <?php
 
-namespace class;
 
-class Rundzelt
+class Rundzelt implements IFaeche
 {
 
     private float $radius;

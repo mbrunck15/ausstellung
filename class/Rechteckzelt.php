@@ -1,8 +1,7 @@
 <?php
 
-namespace class;
 
-class Rechteckzelt
+class Rechteckzelt implements IFaeche
 {
 
     private int $breite;
@@ -38,7 +37,7 @@ class Rechteckzelt
     }
 
 
-    function getFlaeche():int{
+    function getFlaeche():float {
 
         return $this->laenge*$this->breite;
 
