@@ -22,8 +22,9 @@ echo '<br>';
 echo $gesamt=$grundflaeche->getFlaeche()+$grundflaeche1->getFlaeche()+$rundzelt->getFlaeche()*2+$sechseckzelt->getFlaeche();
 echo '<br>';
 
-$a=new Ausstellungsflaeche();//aufruf von standart constructors der in classen standart ist.
+$a = new Ausstellungsflaeche();//aufruf von standart constructors der in classen standart ist.
 // metode aufrufen
+
 $a->erstelletestdaten();
 
 echo '<pre>';
